@@ -199,8 +199,6 @@ def keydown(key):
    
 def keyup(key):
     global paddle1_vel, paddle2_vel
-    #needs a more complicated check to stop paddle movement
-    # there is no key buffer to refer to which was last key
     if (key == p1_up ) and paddle1_vel < 0:
         paddle1_vel =0
     if (key == p1_down) and paddle1_vel > 0:
@@ -223,7 +221,6 @@ def easier_game():
 
 def computer_p1():
     #helper function to run player 1
-    # this code does not allow the computer to have a perfect game (where's the fun in that, the computer can and does fail)
     global paddle1_vel 	#only has control of the [paddle velocity]
     
     #check to see paddle position relative to ball position    
